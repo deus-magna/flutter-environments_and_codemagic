@@ -1,3 +1,5 @@
+[![Codemagic build status](https://api.codemagic.io/apps/601980819e376ad87d98581f/601993599e376a1892b08fa4/status_badge.svg)](https://codemagic.io/apps/601980819e376ad87d98581f/601993599e376a1892b08fa4/latest_build)
+
 # flutter_environments_and_codemagic
 
 A new Flutter project.
