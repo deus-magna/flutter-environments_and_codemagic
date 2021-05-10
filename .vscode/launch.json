@@ -8,13 +8,31 @@
             "name": "Flutter Dev",
             "type": "dart",
             "request": "launch",
-            "program": "lib/main_dev.dart"
+            "program": "lib/main_dev.dart",
+            "args":[
+              "--flavor",
+              "dev"
+            ]
+          },
+          {
+            "name": "Flutter Stage",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main_stage.dart",
+            "args":[
+              "--flavor",
+              "stage"
+            ]
           },
           {
             "name": "Flutter Prod",
             "type": "dart",
             "request": "launch",
-            "program": "lib/main_prod.dart"
+            "program": "lib/main_prod.dart",
+            "args":[
+              "--flavor",
+              "prod"
+            ]
           }
     ]
 }

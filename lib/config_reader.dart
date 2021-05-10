@@ -16,4 +16,12 @@ abstract class ConfigReader {
   static String getSecretKey() {
     return _config['secretKey'] as String;
   }
+
+  static String getDBName() {
+    return _config['dbName'] as String;
+  }
+
+  static String getBaseURL() {
+    return _config['baseUrl'] as String;
+  }
 }
