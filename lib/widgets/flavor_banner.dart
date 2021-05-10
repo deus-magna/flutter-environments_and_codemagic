@@ -4,15 +4,14 @@ import 'package:flutter_environments_and_codemagic/widgets/device_info_dialog.da
 
 class FlavorBanner extends StatelessWidget {
   final Widget child;
-  BannerConfig bannerConfig;
   FlavorBanner({@required this.child});
 
   @override
   Widget build(BuildContext context) {
     if (FlavorConfig.isProduction()) return child;
-    bannerConfig ??= _getDefaultBanner();
+    final BannerConfig bannerConfig = _getDefaultBanner();
     return Stack(
-      children: <Widget>[child, _buildBanner(context)],
+      children: <Widget>[child, _buildBanner(context, bannerConfig)],
     );
   }
 
@@ -22,7 +21,7 @@ class FlavorBanner extends StatelessWidget {
         bannerColor: FlavorConfig.instance.color);
   }
 
-  Widget _buildBanner(BuildContext context) {
+  Widget _buildBanner(BuildContext context, BannerConfig bannerConfig) {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       child: Container(
